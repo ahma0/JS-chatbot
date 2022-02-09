@@ -37,4 +37,5 @@
 </table>
 
 <h2>돔 구조 그리기</h2>
+
 ![돔](./_image/dom.drawio.png)
