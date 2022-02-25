@@ -1,21 +1,52 @@
 var flag = false;
+var key = 0;
 var cnt = 0;
 var app = document.getElementById("cat");
+
+var question = "";
+var answer = "";
 
 var typewriter = new Typewriter(app, {
     loop:false,
 });
 
 typewriter
-    .deleteAll()
-    .typeString("이 몸과 대화할 준비가 됐나?")
-    .pauseFor(1300)
-    .start();
+.deleteAll()
+.typeString("이 몸과 대화할 준비가 됐나?")
+.pauseFor(1300)
+.start();
 
 function checkChat() {
     var chat = document.getElementById("chat").value;
 
     if(chat == "") alert("입력해주세요");
+
+    if(key == 1) {
+        if(chat == "네") {
+            typewriter
+            .deleteAll()
+            .typeString("대답을 입력해주세요!")
+            .pauseFor(1300)
+            .start();
+
+            key = 2;
+        }
+        else {
+            typewriter
+            .deleteAll()
+            .typeString("냐옹~")
+            .pauseFor(1300)
+            .start();
+            key = 0;
+        }
+        return;
+    }
+
+    if(key == 2) {
+        answer = chat;
+        push_json();
+        return;
+    }
 
     if(flag){
         if(chat == "그만해! 냥!"){
@@ -38,10 +69,8 @@ function checkChat() {
             .typeString("먀옹~~")
             .pauseFor(1300)
             .start();
+            return;
         }
-        else if(chat == "뭐해?") typewriter.deleteAll().typeString("meow~").pauseFor(1300).start();
-        else if(chat == "사랑해") typewriter.deleteAll().typeString("냐아아아아옹~~~").pauseFor(1300).start();
-        else if(chat == "바보" || chat == "멍청이") alert("욕설은 안돼요!");
         else if(chat == "불꺼줘") {
             if(cnt == 0) {
                 typewriter
@@ -50,7 +79,8 @@ function checkChat() {
                 .pauseFor(1300)
                 .start();
 
-                cnt++
+                cnt++;
+                return;
             }
             else if(cnt == 1) {
                 typewriter
@@ -60,6 +90,7 @@ function checkChat() {
                 .start();
 
                 cnt++;
+                return;
             }
             else {
                 document.body.style.backgroundColor = "#5D5D5D";
@@ -69,6 +100,7 @@ function checkChat() {
                 .typeString("얏홍")
                 .pauseFor(1300)
                 .start();
+                return;
             }
         }
         else if(chat == "불켜줘") {
@@ -79,19 +111,43 @@ function checkChat() {
             .typeString("애옹")
             .pauseFor(1300)
             .start();
+            return;
         } 
-        else if(chat == "안녕") typewriter.deleteAll().typeString("앩옹").pauseFor(1300).start();
-    
         else {
+            for(let i = 0; i < json.length; i++) {
+                if(chat == json[i].question) {
+                    typewriter
+                    .deleteAll()
+                    .typeString(json[i].answer)
+                    .pauseFor(1300)
+                    .start();
+                    return;
+                }
+            }
             typewriter
             .deleteAll()
-            .typeString("뭐라는거야ㅡㅡ")
+            .typeString("말을 가르쳐주시겠어요?")
             .pauseFor(1300)
             .start();
+
+            question = chat;
+            key = 1;
         }
     }
 
     console.log(chat);
+}
+
+function push_json() {
+    json.push({question: `${question}`, answer: `${answer}`});
+
+    typewriter
+    .deleteAll()
+    .typeString("말 배웟어묘~")
+    .pauseFor(1300)
+    .start();
+
+    key = 0;
 }
 
 document.getElementById("btn").addEventListener('click', checkChat);
