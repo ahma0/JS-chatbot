@@ -41,6 +41,9 @@
 
 ![돔](./_image/dom.drawio.png)
 
+<h2>날짜별 코드 보기</h2>
+https://github.com/NadudAn/JS-Chatbot-Log
+
 <h2>실행결과</h2>
 
 ↓ gif 눌러 결과 사이트 들어가기
