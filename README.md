@@ -17,15 +17,16 @@
     <td>목적</td>
     <td colspan = 3>
       1. JavaScript 학습<br>
-      2. 웹 퍼블리싱에 대한 이해
+      2. 웹 퍼블리싱에 대한 이해<br>
+      3. CDN, JSON 등 활용해보기
     </td>
   </tr>
   <tr rowspan = 3>
     <td>구현내용</td>
     <td colspan = 3>
-      1. <br>
-      2. <br>
-      3. 
+      1. CDN 사용해보기<br>
+      2. JSON 형식의 데이터 저장, 사용으로 간접 체험<br>
+      3. 특정 단어를 말하면 alert 띄우기 등
     </td>
   </tr>
   <tr>
