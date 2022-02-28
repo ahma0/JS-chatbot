@@ -48,3 +48,8 @@ https://github.com/NadudAn/JS-Chatbot-Log
 
 ↓ gif 눌러 결과 사이트 들어가기
 <a href="https://nadudan.github.io/JS-chatbot/main.html">![cat-chatbot-Chrome-2022-02-25-15-41-25](https://user-images.githubusercontent.com/84761609/155668335-b9c5a5c8-0323-47c7-a3af-715121352c0c.gif)</a>
+
+
+<h2>2022 2월 모각코 웹 자바스크립트 수료증</h2>
+
+<img width="842" alt="안나영" src="https://user-images.githubusercontent.com/84761609/155941572-3b11691e-162a-40ec-9a87-df4ea09f17b7.png">
