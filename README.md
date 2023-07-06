@@ -1,5 +1,7 @@
 <h1>자바스크립트를 이용한 챗봇 만들기</h1>
 
+> [주차별 코드 보기](https://github.com/ahma0/JS-chatbot/tree/main/Log)
+
 <table> 
   <tr>
     <td>프로젝트명</td>
@@ -40,9 +42,6 @@
 <h2>돔 구조 그리기</h2>
 
 ![돔](./_image/dom.drawio.png)
-
-<h2>날짜별 코드 보기</h2>
-https://github.com/NadudAn/JS-Chatbot-Log
 
 <h2>실행결과</h2>
 
