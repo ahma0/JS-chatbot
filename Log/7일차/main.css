@@ -1,0 +1,29 @@
+@font-face {
+    font-family: 'DOSMyungjo';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    position: flex;
+
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.box1 {
+    position: flex;
+    flex-direction: column;
+}
+
+.time {
+    font-family: 'DOSMyungjo';
+    font-size: 30px;
+}
+
+.startBtn:disabled {
+    background-color: black;
+}
